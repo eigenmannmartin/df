@@ -4,13 +4,16 @@
       create: true
       force: true 
 
+- shell:
+  - [git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 2> /dev/null || git -C ~/.config/nvim pull]
+  - [git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm 2> /dev/null || git -C ~/.tmux/plugins/tpm pull]
+  - [git clone https://github.com/reobin/typewritten.git ~/.oh-my-zsh/themes/typewritten 2> /dev/null || git -C ~/.oh-my-zsh/themes/typewritten pull]
+  - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 2> /dev/null || echo "ohmyzsh not installed"]
+  - [mkdir ~/code]
+
 - link:
     ~/.zshrc:
     ~/.tmux.conf:
     ~/.config/nvim/lua/custom:
       path: nvchad
 
-- shell:
-  - [git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 2> /dev/null || git -C ~/.config/nvim pull]
-  - [git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm 2> /dev/null || git -C ~/.tmux/plugins/tpm pull]
-  - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 2> /dev/null || echo "ohmyzsh not installed"]
