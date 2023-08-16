@@ -1,0 +1,31 @@
+[general]
+targets = bechterewch_github,eigenmannmartin_github
+inline_links = True
+legacy_matching = False
+annotation_comments=False
+
+[bechterewch_github]
+service = github
+github.username = bechterewch
+github.login = @oracle:eval:op read "op://Personal/GitHub/login"
+github.token = @oracle:eval:op read "op://Personal/GitHub/bugwarrior"
+github.description_template = {{githubnumber}}: {{githubtitle}}
+github.include_user_issues = False
+github.include_user_repos = False
+github.filter_pull_requests = True
+github.query = is:open (is:pr OR is:issue) (repo:bechterewch/present-client OR repo:bechterewch/log) (assignee:eigenmannmartin )
+github.project_template = {{githubrepo}}
+
+
+[eigenmannmartin_github]
+service = github
+github.username = eigenmannmartin
+github.login = @oracle:eval:op read "op://Personal/GitHub/login"
+github.token = @oracle:eval:op read "op://Personal/GitHub/bugwarrior"
+github.description_template = {{githubnumber}}: {{githubtitle}}
+github.include_user_issues = False
+github.include_user_repos = False
+github.filter_pull_requests = True
+github.query = is:open is:pr repo:eigenmannmartin/gitops
+github.project_template = {{githubrepo}}
+

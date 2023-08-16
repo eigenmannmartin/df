@@ -105,5 +105,9 @@ export PATH="$PATH:$HOME/.local/bin"
 export OP_BIOMETRIC_UNLOCK_ENABLED=true
 export GIT_EDITOR=vim
 
-alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive"
-alias calendar="vdirsyncer sync && khal interactive && vdirsyncer sync"
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+source ~/.alias
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
