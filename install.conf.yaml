@@ -9,11 +9,15 @@
   - [git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm 2> /dev/null || git -C ~/.tmux/plugins/tpm pull]
   - [git clone https://github.com/reobin/typewritten.git ~/.oh-my-zsh/themes/typewritten 2> /dev/null || git -C ~/.oh-my-zsh/themes/typewritten pull]
   - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 2> /dev/null || echo "ohmyzsh not installed"]
-  - [mkdir ~/code]
+  - [sh <(curl -sS https://raw.githubusercontent.com/starship/starship/master/install/install.sh) --yes]
+  - [mkdir -p ~/code]
 
 - link:
     ~/.zshrc:
+    ~/.alias:
+    ~/.taskrc:
     ~/.tmux.conf:
+    ~/.bugwarriorrc: bugwarriorrc
     ~/.config/nvim/lua/custom:
       path: nvchad
 

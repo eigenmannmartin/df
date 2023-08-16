@@ -31,8 +31,7 @@ M.telescope = {
           hidden_files = true,
         },
       }
-    }
-  },
+    } },
 }
 
 M.treesitter = {
@@ -69,6 +68,7 @@ M.mason = {
     "typescript-language-server",
     "deno",
     "prettier",
+    "volar",
 
     -- backend dev stuff
     "python-lsp-server",
