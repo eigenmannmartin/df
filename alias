@@ -1,5 +1,5 @@
 
 alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive"
-alias calendar="vdirsyncer sync && khal interactive && vdirsyncer sync"
+alias calendar="vdirsyncer sync & khal interactive"
 
 source ~/.alias.local
