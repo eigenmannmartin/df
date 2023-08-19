@@ -18,6 +18,7 @@
     ~/.taskrc:
     ~/.tmux.conf:
     ~/.bugwarriorrc: bugwarriorrc
+    ~/.config/kitty/kitty.conf: kitty.conf
     ~/.config/nvim/lua/custom:
       path: nvchad
 
