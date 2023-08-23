@@ -228,6 +228,33 @@ local plugins = {
   --   "mg979/vim-visual-multi",
   --   lazy = false,
   -- }
+  {
+    "kwkarlwang/bufresize.nvim",
+    lazy = false,
+    config = function()
+      local opts = { noremap=true, silent=true }
+      require("bufresize").setup({
+          register = {
+              keys = {
+                  { "n", "<leader>q<", "30<C-w><", opts },
+                  { "n", "<leader>q>", "30<C-w>>", opts },
+                  { "n", "<leader>q+", "10<C-w>+", opts },
+                  { "n", "<leader>q-", "10<C-w>-", opts },
+                  { "n", "<leader>q_", "<C-w>_", opts },
+                  { "n", "<leader>q=", "<C-w>=", opts },
+                  { "n", "<leader>q|", "<C-w>|", opts },
+                  { "n", "<leader>qo", "<C-w>|<C-w>_", opts },
+              },
+              trigger_events = { "BufWinEnter", "WinEnter" },
+          },
+          resize = {
+              keys = {},
+              trigger_events = { "VimResized" },
+              increment = 5,
+          },
+      })
+    end,
+  }
 }
 
 return plugins
