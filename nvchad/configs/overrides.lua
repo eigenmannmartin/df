@@ -48,11 +48,15 @@ M.treesitter = {
     "markdown_inline",
     "jsonc",
   },
+  highlight = {
+    enable = false,
+    additional_vim_regex_highlighting = true,
+  },
   indent = {
-    enable = true,
-    -- disable = {
-    --   "python"
-    -- },
+    enable = false,
+    disable = {
+    -- "norg"
+    },
   },
 }
 
@@ -68,7 +72,6 @@ M.mason = {
     "typescript-language-server",
     "deno",
     "prettier",
-    "volar",
 
     -- backend dev stuff
     "python-lsp-server",

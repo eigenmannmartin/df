@@ -49,6 +49,7 @@ local plugins = {
 
   {
     "zbirenbaum/copilot.lua",
+    enabled = false,
     event = "InsertEnter",
     opts = overrides.copilot,
     config = function()
@@ -125,7 +126,9 @@ local plugins = {
 
   {
     "folke/flash.nvim",
+    enabled = true,
     event = "VeryLazy",
+    -- version = "v1.14.0",
     opts = {},
     keys = {
       {
@@ -177,15 +180,15 @@ local plugins = {
     },
   },
 
-  {
-    "VonHeikemen/fine-cmdline.nvim",
-    -- event = "LazyVimStarted",
-    opts = {},
-    lazy = false,
-    dependencies = {
-      "MunifTanjim/nui.nvim"
-    }
-  },
+  --{
+  --  "VonHeikemen/fine-cmdline.nvim",
+  --  -- event = "LazyVimStarted",
+  --  opts = {},
+  --  lazy = false,
+  --  dependencies = {
+  --    "MunifTanjim/nui.nvim"
+  --  }
+  --},
 
   {
     "m4xshen/hardtime.nvim",
@@ -213,7 +216,8 @@ local plugins = {
 
   {
     "christoomey/vim-tmux-navigator",
-    lazy = false
+    lazy = false,
+    enabled = true
   },
 
   -- {
@@ -230,6 +234,7 @@ local plugins = {
   -- }
   {
     "kwkarlwang/bufresize.nvim",
+    enabled = true,
     lazy = false,
     config = function()
       local opts = { noremap=true, silent=true }
@@ -253,6 +258,38 @@ local plugins = {
               increment = 5,
           },
       })
+    end,
+  },
+
+  {
+    "nvim-neorg/neorg",
+    build = ":Neorg sync-parsers",
+    dependencies = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter" },
+    event = "BufEnter *.norg",
+    ft = {"norg"},
+    lazy = false,
+    config = function()
+      require("neorg").setup {
+        load = {
+          ["core.defaults"] = {}, -- Loads default behaviour
+          ["core.concealer"] = {}, -- Adds pretty icons to your documents
+          ["core.esupports.indent"] = {
+            config = {
+              format_on_enter = true,
+              format_on_escape = true,
+            }
+          },
+          ["core.autocommands"] = {},
+          ["core.integrations.treesitter"] = {},
+          ["core.dirman"] = { -- Manages Neorg workspaces
+            config = {
+              workspaces = {
+                knowledge = "~/Nextcloud/knowledge",
+              },
+            },
+          },
+        },
+      }
     end,
   }
 }
