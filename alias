@@ -2,5 +2,8 @@
 alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive"
 alias calendar="vdirsyncer sync & khal interactive"
 alias vim="nvim"
+if command -v exa >/dev/null; then
+  alias ls='exa --icons -F -H --group-directories-first --git -1'
+fi
 
 FILE=~/.alias.local && test -f $FILE && source $FILE

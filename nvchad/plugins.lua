@@ -262,6 +262,11 @@ local plugins = {
   },
 
   {
+    "folke/zen-mode.nvim",
+    lazy = false,
+  },
+
+  {
     "nvim-neorg/neorg",
     build = ":Neorg sync-parsers",
     dependencies = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter" },
@@ -288,10 +293,33 @@ local plugins = {
               },
             },
           },
+          ["core.itero"] = {},
+          ["core.promo"] = {},
+          ["core.presenter"] = {
+            config = {
+              zen_mode = "zen-mode",
+            },
+          },
+          ["core.export"] = {},
+          ["core.export.markdown"] = {},
         },
       }
     end,
-  }
+  },
+
+  {
+     "amitds1997/remote-nvim.nvim",
+     version = "*", -- This keeps it pinned to semantic releases
+     dependencies = {
+         "nvim-lua/plenary.nvim",
+         "MunifTanjim/nui.nvim",
+         "rcarriga/nvim-notify",
+         -- This would be an optional dependency eventually
+         "nvim-telescope/telescope.nvim",
+     },
+     config = true, -- This calls the default setup(); make sure to call it
+     lazy = false
+  },
 }
 
 return plugins
