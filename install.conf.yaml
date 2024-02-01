@@ -7,6 +7,7 @@
 - shell:
   - [git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 2> /dev/null || git -C ~/.config/nvim pull]
   - [git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm 2> /dev/null || git -C ~/.tmux/plugins/tpm pull]
+  - [sh <(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --yes]
     #  - [git clone https://github.com/reobin/typewritten.git ~/.oh-my-zsh/themes/typewritten 2> /dev/null || git -C ~/.oh-my-zsh/themes/typewritten pull]
     #  - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 2> /dev/null || echo "ohmyzsh not installed"]
   - [sh <(curl -sS https://raw.githubusercontent.com/starship/starship/master/install/install.sh) --yes]
