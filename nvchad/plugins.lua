@@ -180,15 +180,15 @@ local plugins = {
     },
   },
 
-  --{
-  --  "VonHeikemen/fine-cmdline.nvim",
-  --  -- event = "LazyVimStarted",
-  --  opts = {},
-  --  lazy = false,
-  --  dependencies = {
-  --    "MunifTanjim/nui.nvim"
-  --  }
-  --},
+  {
+    "VonHeikemen/fine-cmdline.nvim",
+    -- event = "LazyVimStarted",
+    opts = {},
+    lazy = false,
+    dependencies = {
+      "MunifTanjim/nui.nvim"
+    }
+  },
 
   {
     "m4xshen/hardtime.nvim",
