@@ -10,11 +10,12 @@ source $ZSH/oh-my-zsh.sh
 
 
 export PATH="$PATH:$HOME/.local/bin"
-export PATH="~/.npm-global/bin:$PATH"
+export PATH="$PATH:$HOME/.npm-local/bin"
+export PATH="$PATH:$HOME/.npm-global/bin"
 export OP_BIOMETRIC_UNLOCK_ENABLED=true
 export EDITOR=nvim
 export GIT_EDITOR=$EDITOR
-export SSH_AUTH_SOCK=~/.1password/agent.sock
+export DOTFILES_REPOSITORY='https://git.sr.ht/\~eigenmannmartin/dotfiles'
 
 #export PYENV_ROOT="$HOME/.pyenv"
 #command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
@@ -27,10 +28,12 @@ source ~/.alias
 
 #eval "$(starship init zsh)"
 
-export CLOUDSDK_CONFIG=/home/martin/.gcloud
+export CLOUDSDK_CONFIG=/home/$USER/.gcloud
+export GOOGLE_APPLICATION_CREDENTIALS=/home/$USER/.gcloud/application_default_credentials.json
 export HISTFILESIZE=20000
 export HISTSIZE=10000
 export HISTFILE=~/.zsh_history
+#export SSH_AUTH_SOCK=~/.1password/agent.sock
 setopt HIST_FIND_NO_DUPS
 setopt INC_APPEND_HISTORY
 
