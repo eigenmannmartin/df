@@ -47,6 +47,7 @@ M.treesitter = {
     "markdown",
     "markdown_inline",
     "jsonc",
+    "terraform",
   },
   highlight = {
     enable = false,
@@ -81,6 +82,7 @@ M.mason = {
     "clang-format",
 
     "ltex-ls",
+    "terraform-ls",
   },
 }
 
