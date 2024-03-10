@@ -28,6 +28,7 @@ source ~/.alias
 
 #eval "$(starship init zsh)"
 
+export USER=whoami
 export CLOUDSDK_CONFIG=/home/$USER/.gcloud
 export GOOGLE_APPLICATION_CREDENTIALS=/home/$USER/.gcloud/application_default_credentials.json
 export HISTFILESIZE=20000
@@ -43,4 +44,4 @@ export NVM_DIR="$HOME/.nvm"
 
 #Start Ship
 eval "$(starship init zsh)"
-
+eval "$(atuin init zsh)"
