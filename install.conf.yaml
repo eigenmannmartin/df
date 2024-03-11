@@ -25,6 +25,6 @@
     ~/.bugwarriorrc: bugwarriorrc
     ~/.config/kitty/kitty.conf: kitty.conf
     ~/.config/starship.toml: starship.toml
-    ~/.config/nvim/lua/custom:
-      path: nvchad
+    ~/.config/nvim/lua:
+      path: nvim
 

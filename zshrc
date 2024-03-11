@@ -28,7 +28,7 @@ source ~/.alias
 
 #eval "$(starship init zsh)"
 
-export USER=whoami
+export USER=$(whoami)
 export CLOUDSDK_CONFIG=/home/$USER/.gcloud
 export GOOGLE_APPLICATION_CREDENTIALS=/home/$USER/.gcloud/application_default_credentials.json
 export HISTFILESIZE=20000
