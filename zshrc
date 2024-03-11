@@ -45,3 +45,4 @@ export NVM_DIR="$HOME/.nvm"
 #Start Ship
 eval "$(starship init zsh)"
 eval "$(atuin init zsh)"
+eval "$(zoxide init --cmd cd zsh)"

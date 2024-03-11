@@ -12,8 +12,9 @@
     #  - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 2> /dev/null || echo "ohmyzsh not installed"]
   - [curl -sS https://raw.githubusercontent.com/starship/starship/master/install/install.sh | sudo sh -s -- --yes]
   - [curl -sS https://raw.githubusercontent.com/atuinsh/atuin/main/install.sh | sudo bash -s --]
+  - [curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash -s --]
   - [mkdir -p ~/code]
-  - [sudo apt-get update && sudo apt-get -y install software-properties-common && sudo add-apt-repository -y ppa:neovim-ppa/unstable && sudo apt-get install -y neovim tmux]
+  - [sudo apt-get update && sudo apt-get -y install software-properties-common && sudo add-apt-repository -y ppa:neovim-ppa/unstable && sudo apt-get install -y neovim tmux fzf]
   - [sudo usermod -s /bin/zsh $USER]
 
 - link:
