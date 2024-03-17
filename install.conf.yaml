@@ -13,7 +13,7 @@
   - [curl -sS https://raw.githubusercontent.com/atuinsh/atuin/main/install.sh | sudo bash -s --]
   - [curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash -s --]
   - [mkdir -p ~/code]
-  - [sudo apt-get update && sudo apt-get -y install software-properties-common && sudo add-apt-repository -y ppa:neovim-ppa/unstable && sudo apt-get install -y neovim tmux fzf]
+  - [sudo apt-get update && sudo apt-get -y install software-properties-common && sudo add-apt-repository -y ppa:neovim-ppa/unstable && sudo apt-get install -y neovim tmux fzf ripgrep]
   - [sudo usermod -s /bin/zsh $USER]
   - [rm -rf ~/.local/share/nvim]
 
@@ -25,6 +25,8 @@
     ~/.bugwarriorrc: bugwarriorrc
     ~/.config/kitty/kitty.conf: kitty.conf
     ~/.config/starship.toml: starship.toml
+    ~/.scripts/devcontainer:
+      path: devcontainer
     ~/.config/nvim:
       path: nvim
 
