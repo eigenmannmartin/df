@@ -1,0 +1,9 @@
+[user]
+        email = github@eigenmannmartin.ch
+        name = Martin Eigenmann
+
+[commit]
+  gpgsign = true
+
+[gpg]
+  format = ssh

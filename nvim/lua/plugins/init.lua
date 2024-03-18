@@ -1,20 +1,60 @@
 return {
   {
-    "williamboman/mason.nvim",
-    cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate" },
-    opts = function()
-      local opts = require "nvchad.configs.mason"
-      return {'black', 'ltex-ls', opts}
+    "nvim-telescope/telescope-fzf-native.nvim",
+    build = "make",
+  },
+
+  {
+    "kwkarlwang/bufresize.nvim",
+    enabled = true,
+    lazy = false,
+    config = function()
+      local opts = { noremap=true, silent=true }
+      require("bufresize").setup({
+          register = {
+              keys = {
+                  { "n", "<leader>q<", "30<C-w><", opts },
+                  { "n", "<leader>q>", "30<C-w>>", opts },
+                  { "n", "<leader>q+", "10<C-w>+", opts },
+                  { "n", "<leader>q-", "10<C-w>-", opts },
+                  { "n", "<leader>q_", "<C-w>_", opts },
+                  { "n", "<leader>q=", "<C-w>=", opts },
+                  { "n", "<leader>q|", "<C-w>|", opts },
+                  { "n", "<leader>qo", "<C-w>|<C-w>_", opts },
+              },
+              trigger_events = { "BufWinEnter", "WinEnter" },
+          },
+          resize = {
+              keys = {},
+              trigger_events = { "VimResized" },
+              increment = 5,
+          },
+      })
     end,
   },
 
 	{
+		"williamboman/mason.nvim",
+		cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate" },
+		opts = function()
+			local opts = require("nvchad.configs.mason")
+      opts.ensure_installed = { "black", "ltex-ls", "prettier", "lua-language-server", "stylua" }
+      return opts
+		end,
+	},
+
+	{
 		"nvim-treesitter/nvim-treesitter",
 		opts = {
-			ensure_installed = { 
-        "html", "css", "bash", "lua", "markdown",
-        "vim", "vimdoc"
-      },
+			ensure_installed = {
+				"html",
+				"css",
+				"bash",
+				"lua",
+				"markdown",
+				"vim",
+				"vimdoc",
+			},
 		},
 	},
 
@@ -194,13 +234,12 @@ return {
 	},
 
 	{
-		"tveskag/nvim-blame-line",
-		event = "VeryLazy",
-		--cmd = "EnableBlameLine",
+		"braxtons12/blame_line.nvim",
+		lazy = false,
 	},
 
-  {
-    "github/copilot.vim",
-    cmd = "Copilot"
-  }
+	{
+		"github/copilot.vim",
+		cmd = "Copilot",
+	},
 }
