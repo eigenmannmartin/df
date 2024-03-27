@@ -1,0 +1,11 @@
+{
+  "settings": {
+    "dotfiles.repository": "https://git.sr.ht/\~eigenmannmartin/dotfiles",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.profiles.linux": {
+      "fish": {
+        "path": "/usr/bin/zsh"
+      }
+    }
+  }
+}

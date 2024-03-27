@@ -37,3 +37,5 @@ require "nvchad.autocmds"
 vim.schedule(function()
   require "mappings"
 end)
+
+vim.g.terminal_emulator='zsh'

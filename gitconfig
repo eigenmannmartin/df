@@ -1,9 +1,14 @@
 [user]
-        email = github@eigenmannmartin.ch
-        name = Martin Eigenmann
+  email = github@eigenmannmartin.ch
+  name = Martin Eigenmann
+  signingkey = ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCdx9DX/tQ+BbQdlafGuRcukIEX91ZC5p8M+RocaYnpShFs3pHigYfwrtOCWDxtngNgSQvsqFVvBqa6ovfr9HGMk4l6EgKXZVm2nrAvfq26b8ICoIPZv3JUERXCtVDT5zpXT3vJN+kiJTSzn6scnTfXdPaAftjQ7qhfhEQE0PyP/wM2aYWOa8CvoA+LnjAu8R8FLdQFZFlT5H89VkfsZshXqgBt74nTP8GGJIfe5wEDmeb2aEBEnNqSsHGcOZ/A6OCg6FoLDFjaeDQ1hfLuAwdpwDkFn94CUq4J+r8bGRv5KwvY+kV9wvjMfTZvn47UQ7BwjhL4/3yt7pcb+S4ievOolj5U6OSL5x4BiiaigafYgqZyiflLT+dN+EIWGEnb6HaUzWrkl//ckEfVmyvD+fmmC4Z5CGReXe0EsfJalufa2GbvWhLSrVRo1SEB7zSNuUDrBWc4zt7vP0ixtaZJTmj5NADB8csWpReF2LMqz0J0KBd9/y51wRXerzBbItPmqGFW0rQzYzESovzFg1Z/YPzyULnQ1LRi6Co4ai74NaoRor4OjUca0MWkIMnXY4PadpdDSWimrCu9gYBIL6HXfQupAPVlkYEhpKPV94y/R3TENEBLUABF4n8t/4oB4loKPTl+5ql5omAZmoJgsH+RU3rjjWK+R2yFCjNZrdMmMu1uvw==
+
 
 [commit]
   gpgsign = true
 
 [gpg]
   format = ssh
+
+[gpg "ssh"]
+  program = "/opt/1Password/op-ssh-sign"

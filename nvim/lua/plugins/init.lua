@@ -33,15 +33,21 @@ return {
     end,
   },
 
-	{
-		"williamboman/mason.nvim",
-		cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate" },
-		opts = function()
-			local opts = require("nvchad.configs.mason")
-      opts.ensure_installed = { "black", "ltex-ls", "prettier", "lua-language-server", "stylua" }
-      return opts
-		end,
-	},
+   {
+   "williamboman/mason.nvim",
+   opts = {
+      ensure_installed = {
+        "lua-language-server",
+        "html-lsp",
+        "prettier",
+        "stylua",
+        "ltex-ls",
+        "black",
+        "dockerfile-language-server",
+        "bash-language-server"
+      },
+    },
+  },
 
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -64,6 +70,30 @@ return {
 			require("configs.conform")
 		end,
 	},
+
+  {
+  "zbirenbaum/neodim",
+  event = "LspAttach",
+  config = function()
+    require("neodim").setup({
+      refresh_delay = 75,
+      alpha = 0.75,
+      blend_color = "#000000",
+      hide = {
+        underline = true,
+        virtual_text = true,
+        signs = true,
+      },
+      regex = {
+        "[uU]nused",
+        "[nN]ever [rR]ead",
+        "[nN]ot [rR]ead",
+      },
+      priority = 128,
+      disable = {},
+    })
+  end
+  },
 
 	{
 		"nvim-tree/nvim-tree.lua",
@@ -127,6 +157,14 @@ return {
 		},
 	},
 
+  {
+  "neovim/nvim-lspconfig",
+    config = function()
+      require("nvchad.configs.lspconfig").defaults()
+      require "configs.lsp"
+    end,
+  },
+
 	{
 		"folke/noice.nvim",
 		event = "VeryLazy",
@@ -172,16 +210,22 @@ return {
 
 	{
 		"nvim-neorg/neorg",
-		build = ":Neorg sync-parsers",
 		dependencies = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter" },
+    version = "v7.0.0",
 		event = "BufEnter *.norg",
 		ft = { "norg" },
-		lazy = false,
+		lazy = true,
 		config = function()
 			require("neorg").setup({
 				load = {
 					["core.defaults"] = {}, -- Loads default behaviour
-					["core.concealer"] = {}, -- Adds pretty icons to your documents
+					["core.concealer"] = {
+            config = {
+              folds = true,
+              init_open_folds = "never",
+              icon_preset = "varied",
+            },
+          }, -- Adds pretty icons to your document
 					["core.esupports.indent"] = {
 						config = {
 							format_on_enter = true,
