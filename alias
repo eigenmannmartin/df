@@ -1,6 +1,6 @@
 
-alias dcup="devcontainer up --workspace-folder . --mount type=bind,source="$PWD"/.devcontainer/,target=/mnt/devcontainer --dotfiles-repository $DOTFILES_REPOSITORY --remove-existing-container "
-alias dcvim="(trap 'kill 0' SIGINT; (devcontainer exec --workspace-folder . nvim --listen /mnt/devcontainer/nvim.pipe &) && sleep 2 && nvim --remote-ui --server .devcontainer/nvim.pipe) "
+alias dcup="devcontainer up --workspace-folder . --mount type=bind,source="$PWD"/.devcontainer/,target=/mnt/devcontainer --dotfiles-repository $DOTFILES_REPOSITORY --remove-existing-container --additional-features='\{\"ghcr.io/eigenmannmartin/devcontainer-features/neovim:0\": \{\}\}'"
+alias dcvim="(trap 'kill 0' SIGINT; (devcontainer exec --workspace-folder . /bin/zsh -c nvim --listen /mnt/devcontainer/nvim.pipe &) && sleep 1 && nvim --remote-ui --server .devcontainer/nvim.pipe)"
 alias cat="batcat"
 alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive"
 alias calendar="vdirsyncer sync & khal interactive"
