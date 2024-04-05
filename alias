@@ -1,6 +1,7 @@
 
-alias dcup="devcontainer up --workspace-folder . --mount type=bind,source="$PWD"/.devcontainer/,target=/mnt/devcontainer --mount type=bind,source="$HOME"/.1password/agent.sock,target=/home/vscode/.1password/agent.sock --mount type=bind,source=/opt/1Password/op-ssh-sign,target=/opt/1Password/op-ssh-sign --dotfiles-repository $DOTFILES_REPOSITORY --remove-existing-container --additional-features='\{\"ghcr.io/eigenmannmartin/devcontainer-features/neovim:0\": \{\"version\":\"nightly\"\}\}'"
+alias dcup="devcontainer up --workspace-folder . --mount type=bind,source="\$PWD"/.devcontainer/,target=/mnt/devcontainer --mount type=bind,source="$HOME"/.1password/agent.sock,target=/home/vscode/.1password/agent.sock --mount type=bind,source=/opt/1Password/op-ssh-sign,target=/opt/1Password/op-ssh-sign --dotfiles-repository $DOTFILES_REPOSITORY --remove-existing-container --additional-features='\{\"ghcr.io/eigenmannmartin/devcontainer-features/neovim:0\": \{\"version\":\"nightly\"\}\}'"
 alias dcvim="(trap 'kill 0' SIGINT; (devcontainer exec --workspace-folder . --remote-env SHELL=/bin/zsh --remote-env STARSHIP_SHELL=/bin/zsh /bin/zsh -c \"nvim --headless --listen /mnt/devcontainer/nvim.pipe\" &) && sleep 2 && nvim --remote-ui --server .devcontainer/nvim.pipe)"
+alias dcshell="devcontainer exec --workspace-folder . --remote-env SHELL=/bin/zsh --remote-env STARSHIP_SHELL=/bin/zsh /bin/zsh"
 alias cat="batcat"
 alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive"
 alias calendar="vdirsyncer sync & khal interactive"
