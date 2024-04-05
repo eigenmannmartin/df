@@ -38,6 +38,7 @@
     ~/.config/kitty/kitty.conf: kitty.conf
     ~/.config/starship.toml: starship.toml
     ~/.gitconfig: gitconfig
+    ~/.ssh/config: sshconfig
     ~/.scripts/devcontainer:
       path: devcontainer
     ~/.config/nvim:
