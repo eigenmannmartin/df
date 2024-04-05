@@ -13,9 +13,10 @@
       ]
       #  - [git clone https://github.com/reobin/typewritten.git ~/.oh-my-zsh/themes/typewritten 2> /dev/null || git -C ~/.oh-my-zsh/themes/typewritten pull]
       #  - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 2> /dev/null || echo "ohmyzsh not installed"]
-    - [
-        curl -sS https://raw.githubusercontent.com/starship/starship/master/install/install.sh | sudo sh -s -- --yes,
-      ]
+      #- [
+      #  curl -sS https://raw.githubusercontent.com/starship/starship/master/install/install.sh | sudo sh -s -- --yes,
+      #]
+    - [ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k 2> /dev/null ]
     - [
         curl -sS https://raw.githubusercontent.com/atuinsh/atuin/main/install.sh | sudo bash -s --,
       ]
@@ -39,6 +40,7 @@
     ~/.config/starship.toml: starship.toml
     ~/.gitconfig: gitconfig
     ~/.ssh/config: sshconfig
+    ~/.p10k.zsh: p10k.zsh
     ~/.scripts/devcontainer:
       path: devcontainer
     ~/.config/nvim:
