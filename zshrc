@@ -1,7 +1,7 @@
 ZSH="$HOME/.oh-my-zsh"
 
 #Theme
-ZSH_THEME=""
+ZSH_THEME="agnoster"
 
 #Plugins
 plugins=(git)
@@ -43,6 +43,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 #Start Ship
-eval "$(starship init zsh)"
+#eval "$(starship init zsh)"
 eval "$(atuin init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
