@@ -18,6 +18,8 @@ map("v", "<leader>rr", function()
   require('sniprun').run('v')
 end, { desc = "snip run" })
 
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
 --map("n", "<leader>a", "<cmd>:AirLatex<CR>")
 map("n", "<leader>fm", function()
   require("conform").format()

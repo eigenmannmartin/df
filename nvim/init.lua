@@ -38,4 +38,5 @@ vim.schedule(function()
   require "mappings"
 end)
 
-vim.g.terminal_emulator='zsh'
+vim.shell='/bin/zsh'
+--vim.g.terminal_emulator='zsh'
