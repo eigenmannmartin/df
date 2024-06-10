@@ -16,7 +16,10 @@
       #- [
       #  curl -sS https://raw.githubusercontent.com/starship/starship/master/install/install.sh | sudo sh -s -- --yes,
       #]
-    - [ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k 2> /dev/null ]
+      #- [ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k 2> /dev/null ]
+    - [
+        curl -s https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/website/static/install.sh | bash -s -- -d ~/.local/bin,
+      ]
     - [
         curl -sS https://raw.githubusercontent.com/atuinsh/atuin/main/install.sh | sudo bash -s --,
       ]
@@ -36,6 +39,7 @@
     ~/.alias:
     ~/.taskrc:
     ~/.tmux.conf:
+    ~/.zen.toml:
     ~/.bugwarriorrc: bugwarriorrc
     ~/.config/kitty/kitty.conf: kitty.conf
     ~/.config/starship.toml: starship.toml
