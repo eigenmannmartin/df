@@ -293,5 +293,10 @@ return {
 		event = "VeryLazy",
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+
+  {
+    'mbbill/undotree',
+		event = "VeryLazy",
   }
 }

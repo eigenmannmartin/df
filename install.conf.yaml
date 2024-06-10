@@ -46,3 +46,6 @@
       path: devcontainer
     ~/.config/nvim:
       path: nvim
+    ~/.local/bin/dcssh.sh: dcssh.sh
+    ~/.local/bin/remote-open.sh: remote-open.sh
+    ~/.local/bin/xdg-open-svc: xdg-open-svc
