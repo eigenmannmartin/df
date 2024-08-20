@@ -56,7 +56,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     style = 'plain'
     background = 'transparent'
     foreground = 'p:grey'
-    template = '{{ .UserName }}@{{ .HostName }}'
+    template = '{{ if .SSHSession }} {{ end }}<blue>{{ .UserName }}</>@{{ .HostName }}'
 
 [[blocks]]
   type = 'prompt'
