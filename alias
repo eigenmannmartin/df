@@ -1,11 +1,12 @@
-alias _dc='docker run -v /var/run/docker.sock:/var/run/docker.sock -v /usr/bin/docker:/usr/bin/docker -v "$PWD:$PWD" -w "$PWD"  ghcr.io/eigenmannmartin/df-toolkit@sha256:5fa24e5fbaac9cf4b0241c9e2aa47dc9b513286eb9d75e38a3d8a994aaa04b31'
+alias _dc='docker run -v /var/run/docker.sock:/var/run/docker.sock -v /usr/bin/docker:/usr/bin/docker -v "$PWD:$PWD" -w "$PWD"  ghcr.io/eigenmannmartin/df-toolkit:main'
 alias dcup='_dc dcup'
 alias dcdown='_dc dcdown'
+alias dcupclean="_dc dcup --remove-existing-container"
 
-alias dcupclean="dcup --remove-existing-container"
 alias dcvim="(trap 'kill 0' SIGINT; (devcontainer exec --workspace-folder . --remote-env SHELL=/bin/zsh --remote-env STARSHIP_SHELL=/bin/zsh /bin/zsh -c \"nvim --headless --listen /mnt/devcontainer/nvim.pipe\" &) && sleep 2 && nvim --remote-ui --server .devcontainer/nvim.pipe)"
 alias dcshell="devcontainer exec --workspace-folder . --remote-env SHELL=/bin/zsh --remote-env STARSHIP_SHELL=/bin/zsh /bin/zsh"
 alias dcssh="~/.local/bin/dcssh.sh"
+
 alias cat="batcat"
 alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive"
 alias calendar="vdirsyncer sync & khal interactive"
