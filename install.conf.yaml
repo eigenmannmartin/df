@@ -11,12 +11,6 @@
     - [
         sh <(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh) --yes,
       ]
-      #  - [git clone https://github.com/reobin/typewritten.git ~/.oh-my-zsh/themes/typewritten 2> /dev/null || git -C ~/.oh-my-zsh/themes/typewritten pull]
-      #  - [sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 2> /dev/null || echo "ohmyzsh not installed"]
-      #- [
-      #  curl -sS https://raw.githubusercontent.com/starship/starship/master/install/install.sh | sudo sh -s -- --yes,
-      #]
-      #- [ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k 2> /dev/null ]
     - [
         curl -s https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/website/static/install.sh | bash -s -- -d ~/.local/bin,
       ]
@@ -27,12 +21,7 @@
         curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash -s --,
       ]
     - [mkdir -p ~/code]
-    - [mkdir -p ~/.gcloud && touch ~/.gcloud/application_default_credentials.json]
-    #- [
-    #    sudo apt-get update && sudo apt-get -y install software-properties-common && sudo add-apt-repository -y ppa:neovim-ppa/unstable && sudo apt-get install -y neovim tmux fzf ripgrep bat acpi,
-    #  ]
-    #- [sudo usermod -s /bin/zsh $USER]
-    #- [rm -rf ~/.local/share/nvim]
+    - [mkdir -p ~/.gcloud]
 
 - link:
     ~/.zshrc:
@@ -42,14 +31,11 @@
     ~/.zen.toml:
     ~/.bugwarriorrc: bugwarriorrc
     ~/.config/kitty/kitty.conf: kitty.conf
-    ~/.config/starship.toml: starship.toml
     ~/.gitconfig: gitconfig
     ~/.ssh/config: sshconfig
-    ~/.p10k.zsh: p10k.zsh
     ~/.scripts/devcontainer:
       path: devcontainer
     ~/.config/nvim:
       path: nvim
-    ~/.local/bin/dcssh.sh: dcssh.sh
     ~/.local/bin/remote-open.sh: remote-open.sh
     ~/.local/bin/xdg-open-svc: xdg-open-svc
