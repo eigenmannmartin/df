@@ -10,3 +10,4 @@ RUN apt update \
 
 COPY ./dcup.sh /usr/bin/dcup
 COPY ./dcdown.sh /usr/bin/dcdown
+COPY ./dcshell.sh /usr/bin/dcshell
