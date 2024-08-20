@@ -1,8 +1,10 @@
-alias _dc='docker run -v /var/run/docker.sock:/var/run/docker.sock -v /usr/bin/docker:/usr/bin/docker -v "$PWD:$PWD" -w "$PWD" -e DOTFILES_REPOSITORY=$DOTFILES_REPOSITORY -e HOME=$HOME $EXTRA_ARGS ghcr.io/eigenmannmartin/df-toolkit:main'
-alias dcup='_dc dcup'
-alias dcdown='_dc dcdown'
-alias dcupclean='_dc dcup --remove-existing-container'
-alias dcshell='EXTRA_ARGS="-it" _dc dcshell'
+export DC_IMAGE=ghcr.io/eigenmannmartin/df-toolkit:main
+
+alias _dc='docker run -v /var/run/docker.sock:/var/run/docker.sock -v /usr/bin/docker:/usr/bin/docker -v "$PWD:$PWD" -w "$PWD" -e DOTFILES_REPOSITORY=$DOTFILES_REPOSITORY -e HOME=$HOME' 
+alias dcup='_dc $DC_IMAGE dcup'
+alias dcdown='_dc $DC_IMAGE dcdown'
+alias dcupclean='_dc $DC_IMAGE dcup --remove-existing-container'
+alias dcshell='_dc -it $DC_IMAGE dcshell'
 
 alias cat="batcat"
 alias dive="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive"
