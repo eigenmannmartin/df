@@ -5,7 +5,7 @@ require "nvchad.mappings"
 local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
---map("n", ":", "<cmd>FineCmdline<CR>", { desc = "CMD FineCmdline" })
+map("n", ":", "<cmd>FineCmdline<CR>", { desc = "CMD FineCmdline" })
 
 map("n", "<C-h>", "<cmd>TmuxNavigateLeft<CR>", { desc = "Window left" })
 map("n", "<C-l>", "<cmd>TmuxNavigateRight<CR>", { desc = "Window right" })
