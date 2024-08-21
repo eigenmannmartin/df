@@ -4,6 +4,7 @@ local servers = {
   html = {},
   awk_ls = {},
   bashls = {},
+  svelte = {},
   ltex = {
     filetypes = {  "markdown", "md", "tex", "neorg", "norg" },
     settings = {

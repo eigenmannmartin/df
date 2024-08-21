@@ -44,6 +44,7 @@ return {
         "ltex-ls",
         "black",
         "dockerfile-language-server",
+        "svelte-language-server",
         "bash-language-server"
       },
     },
@@ -60,6 +61,7 @@ return {
 				"markdown",
 				"vim",
 				"vimdoc",
+        "svelte",
 			},
 		},
 	},
