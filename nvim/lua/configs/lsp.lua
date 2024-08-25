@@ -10,7 +10,10 @@ local servers = {
     settings = {
       ltex = {
         language = "auto",
-        setenceCacheSize = 2000
+        setenceCacheSize = 2000,
+        completionEnabled = true,
+        checkFrequency = "save",
+        statusBarItem = true
       }
     }
   },
