@@ -3,6 +3,7 @@ local options = {
 	formatters_by_ft = {
 		["lua"] = { "stylua" },
 		["python"] = { "black" },
+		["go"] = { "goimports", "gofmt" },
 		["javascript"] = { "prettier" },
 		["javascriptreact"] = { "prettier" },
 		["typescript"] = { "prettier" },

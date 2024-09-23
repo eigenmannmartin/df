@@ -5,6 +5,9 @@ local servers = {
   awk_ls = {},
   bashls = {},
   svelte = {},
+  gopls = {
+    filetypes = { "go", "gomod" }
+  },
   ltex = {
     filetypes = {  "markdown", "md", "tex", "neorg", "norg" },
     settings = {

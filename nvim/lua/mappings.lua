@@ -1,4 +1,4 @@
-require "nvchad.mappings"
+require("nvchad.mappings")
 
 -- add yours here
 
@@ -13,17 +13,16 @@ map("n", "<C-j>", "<cmd>TmuxNavigateDown<CR>", { desc = "Window down" })
 map("n", "<C-k>", "<cmd>TmuxNavigateUp<CR>", { desc = "Window up" })
 map("n", "<leader>gg", "<cmd>EnableBlameLine<CR>", { desc = "Enable blame line" })
 map("n", "<leader>gh", "<cmd>DisableBlameLine<CR>", { desc = "Disable blame line" })
-map("n", "<leader>rr", "<cmd>SnipRun<CR>", { desc = "Snip run" })
-map("v", "<leader>rr", function()
-  require('sniprun').run('v')
-end, { desc = "snip run" })
+--map("n", "<leader>rr", "<cmd>SnipRun<CR>", { desc = "Snip run" })
+--map("v", "<leader>rr", function()
+--	require("sniprun").run("v")
+--end, { desc = "snip run" })
 
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
 --map("n", "<leader>a", "<cmd>:AirLatex<CR>")
 map("n", "<leader>fm", function()
-  require("conform").format()
+	require("conform").format()
 end, { desc = "File Format with conform" })
 
 map("i", "jk", "<ESC>", { desc = "Escape insert mode" })
-
