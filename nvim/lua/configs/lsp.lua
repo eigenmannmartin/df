@@ -4,6 +4,10 @@ local servers = {
   html = {},
   awk_ls = {},
   bashls = {},
+  gopls = {
+    filetypes = { "go", "gomod" },
+  },
+  ts_ls = {},
   svelte = {},
   gopls = {
     filetypes = { "go", "gomod" }

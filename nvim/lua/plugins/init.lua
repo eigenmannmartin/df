@@ -3,25 +3,24 @@ return {
 		"nvim-telescope/telescope-fzf-native.nvim",
 		build = "make",
 	},
-
-	{
-		"williamboman/mason.nvim",
-		opts = {
-			ensure_installed = {
-				"lua-language-server",
-				"html-lsp",
-				"prettier",
-				"stylua",
-				"ltex-ls",
-				"black",
-				"dockerfile-language-server",
-				"svelte-language-server",
-				"bash-language-server",
-        "gopls"
-			},
-		},
-	},
-
+  {
+   "williamboman/mason.nvim",
+   opts = {
+      ensure_installed = {
+        "lua-language-server",
+        "html-lsp",
+        "prettier",
+        "stylua",
+        "ltex-ls",
+        "black",
+        "dockerfile-language-server",
+        "svelte-language-server",
+        "bash-language-server",
+        "gopls",
+        "ts_ls"
+      },
+    },
+  },
 	{
 		"nvim-treesitter/nvim-treesitter",
 		opts = {
@@ -35,6 +34,7 @@ return {
 				"vimdoc",
 				"svelte",
 				"python",
+        "typescript",
 			},
 		},
 	},
