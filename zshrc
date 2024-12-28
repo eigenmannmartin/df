@@ -2,6 +2,7 @@ ZSH="$HOME/.oh-my-zsh"
 plugins=()
 source $ZSH/oh-my-zsh.sh
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.atuin/bin"
 export PATH="$PATH:$HOME/.npm-local/bin"
 export PATH="$PATH:$HOME/.npm-global/bin"
 export OP_BIOMETRIC_UNLOCK_ENABLED=true
